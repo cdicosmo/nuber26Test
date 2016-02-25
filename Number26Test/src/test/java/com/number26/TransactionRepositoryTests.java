@@ -124,7 +124,7 @@ public class TransactionRepositoryTests {
 		Assert.assertEquals(expectedSum, sum);
 	}
 	
-	public Double generateChainedtransactions(Transaction parentTransaction, int depth) {
+	protected Double generateChainedtransactions(Transaction parentTransaction, int depth) {
 		Double sum = parentTransaction.getAmount();
 		if(depth == 3){
 			return sum;

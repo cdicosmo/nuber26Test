@@ -130,7 +130,7 @@ public class Nunber26TestApplicationTests {
 		.andExpect(content().bytes(String.format("{\"sum\":\"%s\"}", sum.toString()).getBytes()));
 		
 		// status ko if the transaction does not exist
-		mockMvc.perform(get("/transactionservice/sum/9"))
+		mockMvc.perform(get("/transactionservice/sum/1234"))
 		.andExpect(status().isOk())
 		.andExpect(content().contentType(contentType))
 		.andExpect(content().bytes("{\"status\":\"ko\"}".getBytes()));
